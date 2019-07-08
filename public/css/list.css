@@ -1,0 +1,152 @@
+.search{
+  width: 100%;
+  height: .88rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #fff;
+  padding: .2rem 0;
+}
+.search span {
+  font-size: .5rem;
+  color: black;
+  font-weight: 900;
+}
+.search .txt{
+    width: 6.38rem;
+    height: .64rem;
+    border: none;
+    border-radius: .5rem;
+    background: #fff;
+     display: flex;
+  align-items: center;
+  background: #efefef;
+}
+.search .fdj{
+  font-size: .3rem;
+  color: #ccc;
+}
+.search .hb{
+  font-size: .4rem;
+  color:#c33;
+}
+.n-location{
+  width: 1rem;
+  height: .5rem;
+  font-size: .3rem;
+  float: left;
+  color: blue;
+  text-align: center;
+  line-height: .5rem;
+}
+.txt span{
+  width: 1px;
+  height: .4rem;
+  background: #ccc;
+  margin: 0 .3rem;
+}
+.txt a{
+  color: #ccc;
+  margin-left: .1rem;
+}
+
+
+.nav_box{
+  width: 100%;
+  height: 1rem;
+  background: #f9f9f9;
+  border-bottom: 1px solid #ccc;
+}
+.nav_box_list{
+  height: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav_box_list li{
+  width: 1.86rem;
+  height: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+
+
+
+#sp_list_xq{
+  overflow: auto;
+  height: 100%;
+}
+.list_sp .sp_box{
+  width: 100%;
+  height: 2.3rem;
+  padding: .2rem;
+  overflow: auto;
+}
+
+.list_sp .sp_img{
+    width: 1.9rem;
+    height: 1.9rem;
+    float: left;
+    padding-right: .2rem;
+}
+.list_sp .sp_img img{
+  width: 100%;
+  height: 100%;
+  border-radius: .1rem;
+}
+.list_sp .sp_play{
+  width: 5.02rem;
+  height: 1.9rem;
+  float: left;
+}
+.sp_play h3{
+  font-size: .36rem;
+}
+.play_dg {
+  padding: .1rem 0;
+}
+.play_dg span{
+  border: 1px solid #19a0f2;
+  font-size: .24rem;
+  color: #19a0f2;
+}
+.sp_grade .grade_minute{
+    font-size: .35rem;
+    color:#19a0f2; 
+}
+.sp_grade .grade_recommend{
+    color:#19a0f2; 
+}
+.sp_grade .grade_deal{
+  color: #9999a5;
+}
+.sp_price{
+  float: right;
+}
+.sp_price .price_yh{
+    height: .5rem;
+    line-height: .5rem;
+}
+.sp_price .price_num{
+    height: .5rem;
+    line-height: .5rem;
+}
+.sp_price .price_num a{
+  color: red;
+  font-size: .4rem;
+  font-weight: 900;
+}
+.sp_price .price_num span{
+  font-size: .2rem;
+  color: red;
+}
+.sp_grade{
+  float: left;
+}
+.sp_site{
+  color: #9999a5;
+  padding: .1rem 0;
+}
