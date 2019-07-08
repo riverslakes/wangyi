@@ -5,20 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <link rel="stylesheet" href="./css/iconfont.css">
-    <!-- <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+<!-- 
     <link rel="stylesheet" href="./css/001.css">
     <link rel="stylesheet" href="./css/002.css">
     <link rel="stylesheet" href="./css/iconfont.css">
     <link rel="stylesheet" href="./css/list.css">
     <link rel="stylesheet" href="./css/lsit.css">
-    <link rel="stylesheet" href="./css/swiper.min.css">
     <link rel="stylesheet" href="./css/wangyiyuan.css"> -->
     <title>wangyi</title>
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but wangyi doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
+
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
@@ -26,3 +25,8 @@
 <script src="./js/flexble.js"></script>
 <script src="./js/swiper.min.js"></script>
 <script src="./js/iconfont.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        autoplay: true,//可选选项，自动滑动
+    })
+</script>

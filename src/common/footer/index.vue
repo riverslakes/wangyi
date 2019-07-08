@@ -13,6 +13,7 @@
                     <li>触屏幕</li>
                     <li>电脑版</li>
                 </ul>
+                <p>网易公司版权99999999</p>
             </div>
         </div>
     </div>
@@ -27,9 +28,8 @@ export default {
 <style>
 #foot{
     width: 100%;
-    height: 2rem;
-    position: relative;
-    top:.6rem;
+    height: 2.4rem;
+
 }
 .foot_n{
     width: 90%;
@@ -38,8 +38,6 @@ export default {
     border: 1px solid #ffffff;
     text-align: center;
     background: #e74c2e ;
-    position: relative;
-    top:.3rem;
     margin:0 auto;
     border-radius:6px;
 }
@@ -47,16 +45,13 @@ export default {
     color: #ffffff;
 }
 .foot_m{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:space-between;
-    position: relative;
-    top:.86rem;
+  width: 6.68rem;
+  margin-top: 0.4rem;
 }
 .foot_m ul{
     display: flex;
-    flex-wrap: wrap;
-    justify-content:space-between;
+    justify-content:space-around;
+    align-items: center;
 }
 .foot_m ul li{
     margin-left: .56rem;
@@ -64,5 +59,15 @@ export default {
 }
 .foot_m ul li:nth-child(4){
     color: red
+}
+.foot_m P{
+    font-size: 0.28rem;
+    color: #bbb;
+    text-align: center;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    width: 6.68rem;
+    margin: auto;
+    margin-top: 0.2rem;
 }
 </style>

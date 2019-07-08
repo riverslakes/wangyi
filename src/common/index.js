@@ -4,3 +4,5 @@ import Footer from "./footer";
 Vue.component("HeaderCom",Header)
 Vue.component("Footer",Footer)
 
+
+

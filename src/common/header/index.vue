@@ -78,7 +78,6 @@ li{
     justify-content:space-between;
 	box-sizing: border-box;
 	flex-shrink: 0;
-	position: absolute;
     width: 90%;
     margin-left: .4rem;
 }
@@ -102,13 +101,14 @@ li{
 .header_q{
     height: .96rem;
     width: 100%;
-    position: relative;
-    top: .8rem;
+    display: flex;
+    justify-content: space-around;
 }
 .header_q ul li{
     float: left;
     margin-left: .44rem;
     line-height: .96rem;
+    font-size: 0.28rem;
 }
 .header_q .router-link-exact-active{
     font-weight: 900;
@@ -117,8 +117,7 @@ li{
 #banner img{
     width: 80%;
     height: 1.2rem;
-    position: relative;
-    top: .8rem;
+ 
     margin-left: .6rem
 }
 </style>
