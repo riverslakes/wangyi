@@ -1,0 +1,37 @@
+<template>
+    <div class="list_wn">
+      <div class="gd_list">
+        <strong>重磅推荐</strong><span>更多</span>
+      </div>
+      <ul>
+        <li class="recommend" v-for="(item,index) in BoyTuiJian" :key="index">
+          <img :src="item.iconUrl">
+          <h4>{{item.title}}</h4>
+          <p>{{item.author}}</p>
+        </li>
+      </ul>
+    </div>
+</template>
+
+<script>
+import {getBoyBoom} from "api/boy"
+export default {
+    name:"BoyTuiJian",
+    async created(){
+        let data = await getBoyBoom();
+        
+        this.BoyTuiJian = data.data.books;
+        this.BoyTuiJian.length = 6;
+        this.BoyTuiJian.splice(0,3);
+    },
+    data(){
+        return {
+            BoyTuiJian:[]
+        }
+    }
+}
+</script>
+
+<style>
+
+</style>
