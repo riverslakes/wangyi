@@ -3,127 +3,39 @@
         <HeaderCom/>
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="https://easyreadfs.nosdn.127.net/fe_cms/file.cbacb57d248c28170d7f10139fac4b26.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="https://easyreadfs.nosdn.127.net/fe_cms/file.cbacb57d248c28170d7f10139fac4b26.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="https://easyreadfs.nosdn.127.net/fe_cms/file.9f0fb77c5e5acd7a8840980e2d630b9a.png" alt=""></div>
+                <div class="swiper-slide"><img src="https://easyreadfs.nosdn.127.net/fe_cms/file.0c53285725627f6b7741d2c188899cf1.jpg" alt=""></div>
             </div>
         </div>
-        <div class="list_wn">
-            <div class="gd_list">
-                <strong>主编推荐</strong><span>更多</span>
-            </div>
-            <ul>
-                <li class="recommend">
-                <img src="https://easyreadfs.nosdn.127.net/NkM0AnD-QButhfTwt7C8GQ==/8796093024331019149?imageView&thumbnail=240y336" alt="">
-                <h4>漫威之父：超级英雄的诞生</h4>
-                <p>【美】斯坦·李,白珊</p>
-                </li>
-                <li class="recommend">
-                <img src="https://easyreadfs.nosdn.127.net/NkM0AnD-QButhfTwt7C8GQ==/8796093024331019149?imageView&thumbnail=240y336"
-                    alt="">
-                <h4>漫威之父：超级英雄的诞生</h4>
-                <p>【美】斯坦·李,白珊</p>
-                </li>
-                <li class="recommend">
-                <img src="https://easyreadfs.nosdn.127.net/NkM0AnD-QButhfTwt7C8GQ==/8796093024331019149?imageView&thumbnail=240y336"
-                    alt="">
-                <h4>漫威之父：超级英雄的诞生</h4>
-                <p>【美】斯坦·李,白珊</p>
-                </li>
-                <li class="recommend">
-                <img src="https://easyreadfs.nosdn.127.net/NkM0AnD-QButhfTwt7C8GQ==/8796093024331019149?imageView&thumbnail=240y336"
-                    alt="">
-                <h4>漫威之父：超级英雄的诞生</h4>
-                <p>【美】斯坦·李,白珊</p>
-                </li>
-                <li class="recommend">
-                <img src="https://easyreadfs.nosdn.127.net/NkM0AnD-QButhfTwt7C8GQ==/8796093024331019149?imageView&thumbnail=240y336"
-                    alt="">
-                <h4>漫威之父：超级英雄的诞生</h4>
-                <p>【美】斯坦·李,白珊</p>
-                </li>
-                <li class="recommend">
-                <img src="https://easyreadfs.nosdn.127.net/NkM0AnD-QButhfTwt7C8GQ==/8796093024331019149?imageView&thumbnail=240y336"
-                    alt="">
-                <h4>漫威之父：超级英雄的诞生</h4>
-                <p>【美】斯坦·李,白珊</p>
-                </li>
-            </ul>
-        </div>
-        <div class="list_wn">
-            <div class="gd_list">
-                <strong>新书上线</strong><span>更多</span>
-            </div>
-            <ul>
-                <li class="recommend">
-                <img src="https://easyreadfs.nosdn.127.net/NkM0AnD-QButhfTwt7C8GQ==/8796093024331019149?imageView&thumbnail=240y336" alt="">
-                <h4>漫威之父：超级英雄的诞生</h4>
-                <p>【美】斯坦·李,白珊</p>
-                </li>
-                <li class="recommend">
-                <img src="https://easyreadfs.nosdn.127.net/NkM0AnD-QButhfTwt7C8GQ==/8796093024331019149?imageView&thumbnail=240y336"
-                    alt="">
-                <h4>漫威之父：超级英雄的诞生</h4>
-                <p>【美】斯坦·李,白珊</p>
-                </li>
-                <li class="recommend">
-                <img src="https://easyreadfs.nosdn.127.net/NkM0AnD-QButhfTwt7C8GQ==/8796093024331019149?imageView&thumbnail=240y336"
-                    alt="">
-                <h4>漫威之父：超级英雄的诞生</h4>
-                <p>【美】斯坦·李,白珊</p>
-                </li>
-                <li class="recommend">
-                <img src="https://easyreadfs.nosdn.127.net/NkM0AnD-QButhfTwt7C8GQ==/8796093024331019149?imageView&thumbnail=240y336"
-                    alt="">
-                <h4>漫威之父：超级英雄的诞生</h4>
-                <p>【美】斯坦·李,白珊</p>
-                </li>
-                <li class="recommend">
-                <img src="https://easyreadfs.nosdn.127.net/NkM0AnD-QButhfTwt7C8GQ==/8796093024331019149?imageView&thumbnail=240y336"
-                    alt="">
-                <h4>漫威之父：超级英雄的诞生</h4>
-                <p>【美】斯坦·李,白珊</p>
-                </li>
-                <li class="recommend">
-                <img src="https://easyreadfs.nosdn.127.net/NkM0AnD-QButhfTwt7C8GQ==/8796093024331019149?imageView&thumbnail=240y336"
-                    alt="">
-                <h4>漫威之父：超级英雄的诞生</h4>
-                <p>【美】斯坦·李,白珊</p>
-                </li>
-            </ul>
-        </div>
-        <div class="list_wn">
-            <div class="gd_list">
-                <strong>经典排行榜</strong><span>更多</span>
-            </div>
-            <ul>
-                <li class="recommend">
-                <img src="https://easyreadfs.nosdn.127.net/NkM0AnD-QButhfTwt7C8GQ==/8796093024331019149?imageView&thumbnail=240y336"
-                    alt="">
-                <h4>漫威之父：超级英雄的诞生</h4>
-                <p>【美】斯坦·李,白珊</p>
-                </li>
-                <li class="recommend">
-                <img src="https://easyreadfs.nosdn.127.net/NkM0AnD-QButhfTwt7C8GQ==/8796093024331019149?imageView&thumbnail=240y336"
-                    alt="">
-                <h4>漫威之父：超级英雄的诞生</h4>
-                <p>【美】斯坦·李,白珊</p>
-                </li>
-                <li class="recommend">
-                <img src="https://easyreadfs.nosdn.127.net/NkM0AnD-QButhfTwt7C8GQ==/8796093024331019149?imageView&thumbnail=240y336"
-                    alt="">
-                <h4>漫威之父：超级英雄的诞生</h4>
-                <p>【美】斯坦·李,白珊</p>
-                </li>
-            </ul>
-        </div>
+      
+        <PublishNow/>
+
+        <PublishNew/>
+
+        <PublishRank/>
+        
         <Footer/>
     </div>
     
 </template>
 
 <script>
+import PublishNow from "components/publishNow"
+import PublishNew from "components/publishNew"
+import PublishRank from "components/publishRank"
+
 export default {
-    name:"publish"
+    name:"publish",
+    components:{
+        PublishNow,
+        PublishNew,
+        PublishRank
+    },
+    mounted(){
+          var mySwiper = new Swiper('.swiper-container', {
+        autoplay: true,//可选选项，自动滑动
+    })
+    }
 }
 </script>
 

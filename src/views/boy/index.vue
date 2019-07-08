@@ -62,7 +62,6 @@ export default {
 .list_wn{
   width: 100%;
   background-color: #fff;
-  padding: .4rem;
    box-sizing: border-box;
 }
 
