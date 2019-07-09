@@ -81,6 +81,7 @@ body{
   height: .6rem;
   float: left;
   line-height: .6rem;
+  font-weight: 900;
 }
 .gd_list span{
   float: right;
@@ -94,6 +95,7 @@ body{
 }
 .recommend{
   width: 28%;
+  margin-bottom: 0.2rem;
 }
 .recommend img{
   width: 100%;

@@ -9,7 +9,7 @@
 
 
 
-        <div class="swiper-container">
+    <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide"><img src="https://easyreadfs.nosdn.127.net/fe_cms/file.cbacb57d248c28170d7f10139fac4b26.jpg" alt=""></div>
             <div class="swiper-slide"><img src="https://easyreadfs.nosdn.127.net/fe_cms/file.cbacb57d248c28170d7f10139fac4b26.jpg" alt=""></div>
@@ -63,6 +63,7 @@ export default {
   width: 100%;
   background-color: #fff;
    box-sizing: border-box;
+   padding: 0.4rem;
 }
 
 .list_wn ul{
@@ -95,8 +96,12 @@ export default {
 .recommend{
   width: 28%;
 }
-.recommend img{
+.recommend_img{
+  height: 2.62rem;
+}
+.recommend_img img{
   width: 100%;
+  height: 100%;
 }
 .recommend h4{
   display: -webkit-box;
@@ -120,7 +125,7 @@ export default {
   height:.64rem;
   border: 1px solid #ccc;
   border-radius: .3rem;
-  padding-left: .4rem;
+  padding-left: 0.4rem;
   background: #f7f7f7;
 }
 .input_wn .txt{
@@ -172,6 +177,7 @@ export default {
   height: .6rem;
   float: left;
   line-height: .6rem;
+  font-weight: 900;
 }
 .gd_list span{
   float: right;
@@ -218,8 +224,7 @@ export default {
   color: #999;
 }
 .play_txt h3{
-  font-size: .4rem;
-  font-weight: 900;
+  font-size: .3rem;
   margin-bottom:.14rem;
   color: #222;
 }

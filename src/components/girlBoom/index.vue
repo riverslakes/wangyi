@@ -4,7 +4,7 @@
         <strong>畅销榜</strong><span>更多</span>
       </div>
       <ul>
-        <li class="recommend" v-for="(item,index) in BoyBoom" :key="index">
+        <li class="recommend" v-for="(item,index) in GirlBoom" :key="index">
           <div class="recommend_img"><img :src="item.iconUrl"></div>
           <h4>{{item.title}}</h4>
           <p>{{item.author}}</p>
@@ -14,18 +14,17 @@
 </template>
 
 <script>
-import {getBoyBoom} from "api/boy"
+import {getGirlTuiJian} from "api/girl"
 export default {
-    name:"BoyBoom",
+    name:"girlBoom",
     async created(){
-        let data = await getBoyBoom();
-        
-        this.BoyBoom = data.data.books;
-        this.BoyBoom.length = 3;
+        let data = await getGirlTuiJian();
+        this.GirlBoom = data.data.books;
+        this.GirlBoom.length = 3;
     },
     data(){
         return {
-            BoyBoom:[]
+            GirlBoom:[]
         }
     }
 }
