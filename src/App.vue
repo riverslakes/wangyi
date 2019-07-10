@@ -1,18 +1,16 @@
 <template>
   <div id="app">
-    <router-view></router-view>
-    <!-- <TabBar/>
-    <Footer/> -->
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
+    
   </div>
 </template>
 <script>
-// import TabBar from "common/header/"
-// import Footer from "common/footer"
 export default {
   name:"app",
   components:{
-    // TabBar,
-    // Footer
+
   }
 }
 </script>

@@ -60,10 +60,10 @@ export default {
 
 <style>
 .list_wn{
-  width: 100%;
+  width: 6.68rem;
   background-color: #fff;
-   box-sizing: border-box;
-   padding: 0.4rem;
+  margin: 0.2rem auto;
+   padding-bottom: 0.2rem;
 }
 
 .list_wn ul{
@@ -75,7 +75,7 @@ export default {
 .gd_list{
   width: 100%;
   height: .6rem;
-  margin-bottom: .3rem;
+  margin-bottom: .2rem;
 }
 .gd_list strong{
   font-size: .4rem;
@@ -120,51 +120,23 @@ export default {
   overflow: hidden;
   color: #888;
 }
-.input_wn{
-  width:6.86rem;
-  height:.64rem;
-  border: 1px solid #ccc;
-  border-radius: .3rem;
-  padding-left: 0.4rem;
-  background: #f7f7f7;
-}
-.input_wn .txt{
-    width: 5.26rem;
-    height: .6rem;
-    border: 0;
-    background: #f7f7f7;
-    outline: none;
-}
-.but{
-  background-color: #fff;
-  border: 0;
-  width: 1rem;
-  height: .6rem;
-  float: right;
-  padding-top:.1rem ;
-  border-radius: .4rem .4rem .4rem .4rem;
-  background: #f7f7f7;
-  outline: none;
-}
-.but i{
-    font-size: .4rem;
-    text-align: center;
-     
-}
+
 
 
 .list_boy{
-  width:100%;
+  width: 100%;
   background-color: #fff;
-  padding: .4rem;
-   box-sizing: border-box;
+  padding: 0.4rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  box-sizing: border-box;
 }
 .list_fl{
-  width:100%;
+  width:6.68rem;
   background-color: #fff;
-  padding: .4rem;
-   box-sizing: border-box;
-   border-bottom: 1px solid #ccc;
+  margin:.2rem auto;
+  padding-bottom: 0.14rem;
+  border-bottom: 1px solid #ccc;
 }
 
 .gd_list{

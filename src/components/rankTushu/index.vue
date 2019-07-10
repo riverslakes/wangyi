@@ -1,5 +1,5 @@
 <template>
-  <div id="list">
+  <div class="list">
     <div class="list-header">
       <p class="rankingList">图书排行榜</p>
       <span>更多</span>

@@ -7,7 +7,9 @@ import girl from "./girl";
 import publish from "./publish";
 import ranking from "./ranking";
 import free from "./free";
-import classify from "./classify"
+import classify from "./classify";
+import list from "./list";
+
 export default new Router({
   routes: [
     body,
@@ -15,6 +17,10 @@ export default new Router({
     publish,
     ranking,
     free,
-    classify
+    classify,
+    list,
+    { path: '/', redirect: to => {
+         return "./boy"
+      }}
   ]
 })

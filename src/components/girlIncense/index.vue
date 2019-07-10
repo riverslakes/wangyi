@@ -4,7 +4,7 @@
          <strong>古色古香</strong><span>更多</span>
         </div>
         <ul>
-            <li class="list_play" v-for="(item,index) in GirlIncense" :key="index">
+            <v-touch tag="li" @tap="handleList()" class="list_play" v-for="(item,index) in GirlIncense" :key="index">
                 <div class="play_img">
                   <img :src="item.iconUrl">
                   <div class="play_xm">限免</div>
@@ -17,7 +17,7 @@
                   <span class="txt_mf">{{item.category}}</span>
                   <span class="txt_mf">{{item.showTotalCount}}</span></p>
                 </div>
-            </li>
+            </v-touch>
           </ul>
         </div>
 </template>
@@ -35,6 +35,11 @@ export default {
   data(){
     return {
       GirlIncense:[]
+    }
+  },
+  methods:{
+    handleList(){
+      this.$router.push("/list")
     }
   }
 }

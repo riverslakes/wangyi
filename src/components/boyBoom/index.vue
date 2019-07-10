@@ -4,30 +4,38 @@
         <strong>畅销榜</strong><span>更多</span>
       </div>
       <ul>
-        <li class="recommend" v-for="(item,index) in BoyBoom" :key="index">
+        <v-touch tag="li" @tap="handleList()" class="recommend" v-for="(item,index) in BoyBoom" :key="index">
           <div class="recommend_img"><img :src="item.iconUrl"></div>
           <h4>{{item.title}}</h4>
           <p>{{item.author}}</p>
-        </li>
+        </v-touch>
       </ul>
     </div>
 </template>
 
 <script>
-import {getBoyBoom} from "api/boy"
+import {getData} from "api/boy"
 export default {
     name:"BoyBoom",
     async created(){
-        let data = await getBoyBoom();
-        
+        let data = await getData();
+        // console.log(data);
+        // console.log(this.page);
+
         this.BoyBoom = data.data.books;
         this.BoyBoom.length = 3;
     },
     data(){
         return {
-            BoyBoom:[]
+            BoyBoom:[],
+            page:''
         }
+    },
+    methods:{
+    handleList(){
+      this.$router.push("/list")
     }
+  }
 }
 </script>
 

@@ -56,13 +56,12 @@ export default {
 </script>
 
 <style>
-.list_wn {
-  width: 100%;
+.list_wn{
+  width: 6.68rem;
   background-color: #fff;
-  box-sizing: border-box;
-  padding: 0 0.4rem;
+  margin: 0.2rem auto;
+   padding-bottom: 0.2rem;
 }
-
 .list_wn ul {
   display: flex;
   justify-content: space-between;
@@ -118,36 +117,7 @@ export default {
   overflow: hidden;
   color: #888;
 }
-.input_wn {
-  width: 6.86rem;
-  height: 0.64rem;
-  border: 1px solid #ccc;
-  border-radius: 0.3rem;
-  padding-left: 0.4rem;
-  background: #f7f7f7;
-}
-.input_wn .txt {
-  width: 5.26rem;
-  height: 0.6rem;
-  border: 0;
-  background: #f7f7f7;
-  outline: none;
-}
-.but {
-  background-color: #fff;
-  border: 0;
-  width: 1rem;
-  height: 0.6rem;
-  float: right;
-  padding-top: 0.1rem;
-  border-radius: 0.4rem 0.4rem 0.4rem 0.4rem;
-  background: #f7f7f7;
-  outline: none;
-}
-.but i {
-  font-size: 0.4rem;
-  text-align: center;
-}
+
 
 .list_boy {
   width: 100%;
@@ -155,11 +125,11 @@ export default {
   padding: 0.4rem;
   box-sizing: border-box;
 }
-.list_fl {
-  width: 100%;
+.list_fl{
+  width:6.68rem;
   background-color: #fff;
-  padding: 0.4rem;
-  box-sizing: border-box;
+  margin:.2rem auto;
+  padding-bottom: 0.14rem;
   border-bottom: 1px solid #ccc;
 }
 

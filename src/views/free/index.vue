@@ -24,13 +24,17 @@ export default {
 
 <style>
 .list_fl{
-  width:100%;
+  width:6.68rem;
   background-color: #fff;
-  padding: .4rem;
-   box-sizing: border-box;
-   border-bottom: 1px solid #ccc;
+  margin:.2rem auto;
+  padding-bottom: 0.14rem;
+  border-bottom: 1px solid #ccc;
 }
-
+.list_fl:nth-of-type(3){
+  margin-bottom: 0.1rem;
+  padding: 0;
+  border-bottom: none;
+}
 .gd_list{
   width: 100%;
   height: .6rem;
@@ -103,7 +107,7 @@ export default {
   color: #999;
   font-size: .24rem;
 }
-.play_txt .txt_mf{
+.play_txt .txt_free{
   font-size: .24rem;
   margin-right:.2rem ;
   color: #e64d2e;

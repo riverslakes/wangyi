@@ -4,11 +4,11 @@
         <strong>畅销榜</strong><span>更多</span>
       </div>
       <ul>
-        <li class="recommend" v-for="(item,index) in GirlBoom" :key="index">
+        <v-touch tag="li" @tap="handleList()" class="recommend" v-for="(item,index) in GirlBoom" :key="index">
           <div class="recommend_img"><img :src="item.iconUrl"></div>
           <h4>{{item.title}}</h4>
           <p>{{item.author}}</p>
-        </li>
+        </v-touch>
       </ul>
     </div>
 </template>
@@ -26,7 +26,12 @@ export default {
         return {
             GirlBoom:[]
         }
+    },
+    methods:{
+    handleList(){
+      this.$router.push("/list")
     }
+  }
 }
 </script>
 

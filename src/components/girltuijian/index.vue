@@ -4,11 +4,11 @@
         <strong>重磅推荐</strong><span>更多</span>
       </div>
       <ul>
-        <li class="recommend" v-for="(item,index) in GirlTuiJian" :key="index">
+        <v-touch tag="li" @tap="handleList()" class="recommend" v-for="(item,index) in GirlTuiJian" :key="index">
           <div class="recommend_img"><img :src="item.iconUrl"></div>
           <h4>{{item.title}}</h4>
           <p>{{item.author}}</p>
-        </li>
+        </v-touch>
       </ul>
     </div>
 </template>
@@ -26,7 +26,12 @@ export default {
         return {
             GirlTuiJian:[]
         }
+    },
+    methods:{
+    handleList(){
+      this.$router.push("/list")
     }
+  }
 }
 </script>
 

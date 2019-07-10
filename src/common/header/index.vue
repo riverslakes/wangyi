@@ -71,7 +71,7 @@ li{
     list-style: none;
 }
 #header{
-	height: .88rem;
+	height: .7rem;
 	display: flex;
 	align-items: center;
     justify-content:center;
@@ -99,7 +99,7 @@ li{
 }
 
 .header_q{
-    height: .96rem;
+    height: .6rem;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -107,7 +107,7 @@ li{
 .header_q ul li{
     float: left;
     margin-left: .44rem;
-    line-height: .96rem;
+    line-height: .6rem;
     font-size: 0.28rem;
 }
 .header_q .router-link-exact-active{

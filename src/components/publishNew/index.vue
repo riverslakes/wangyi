@@ -4,11 +4,11 @@
                 <strong>新书上线</strong><span>更多</span>
             </div>
             <ul>
-                <li class="recommend" v-for="(item,index) in publishNew" :key="index">
+                <v-touch tag="li" @tap="handleList()" class="recommend" v-for="(item,index) in publishNew" :key="index">
                 <img :src="item.iconUrl" alt="">
                 <h4>{{item.title}}</h4>
                 <p>{{item.author}}</p>
-                </li>
+                </v-touch>
             </ul>
         </div>
 </template>
@@ -26,7 +26,12 @@ export default {
         return {
             publishNew:[]
         }
+    },
+    methods:{
+    handleList(){
+      this.$router.push("/list")
     }
+  }
 }
 </script>
 

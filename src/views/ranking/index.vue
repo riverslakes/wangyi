@@ -4,12 +4,6 @@
     <RankBoy/>
     <RankGirl/>
     <RankTushu/>
-    <div class="input_wn">
-      <input type="text" class="txt" placeholder="请输入作者或书名">
-      <button class="but">
-        <i class="iconfont icon-fangdaj">搜索</i>
-      </button>
-    </div>
     <Footer/>
   </div>
 </template>
@@ -30,13 +24,15 @@ export default {
 </script>
 
 <style>
-#list {
+.list {
   width: 6.68rem;
-  height: 7.2rem;
-  margin: 0.2rem auto;
+  height: 6.8rem;
+  margin: 0.1rem auto;
   border-bottom: 1px solid #ccc;
 }
-
+.list:nth-of-type(4){
+  border: none;
+}
 /*list-header start*/
 .list-header {
   width: 100%;
@@ -160,35 +156,5 @@ export default {
   line-height: 0.32rem;
   font-size: 0.28rem;
   margin-left: 0.2rem;
-}
-.input_wn {
-  width: 100%;
-  height: 0.64rem;
-  margin-left: .4rem;
-}
-.input_wn .txt {
-  width: 5.06rem;
-  height: 0.6rem;
-  font-size: .3rem;
-  border: 0;
-  background: #f7f7f7;
-  outline: none;
-  border-radius: 0.3rem 0 0 0.3rem;
-  padding-left: .2rem;
-  float: left;
-}
-.but {
-  background-color: #fff;
-  border: 0;
-  width: 1rem;
-  height: 0.6rem;
-  border-radius: 0rem 0.3rem 0.3rem 0rem;
-  background: #f7f7f7;
-  outline: none;
-}
-.but i {
-  font-size: 0.4rem;
-  text-align: center;
-  color: #000;
 }
 </style>
