@@ -3,6 +3,7 @@
         <HeaderCom/>
         <BoyFree/>
         <GirlFree/>
+        <Top/>
         <Footer/>
     </div>
     

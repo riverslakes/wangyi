@@ -6,8 +6,6 @@ const mutations ={}
 const actions = {
     async getData(){
         let data = await classifyData();
-        console.log(111);
-        console.log(data)
     }
 }
 export default {

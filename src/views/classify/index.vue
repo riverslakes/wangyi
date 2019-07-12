@@ -4,8 +4,8 @@
     <div id="box">
     	<h2>丨男生小说</h2>
         <div id="boy">
-        <div class="boy_1"><a style="color: #ee6460;">都市</a></div>
-        <div class="boy_1"><a style="color: #ee6460;">玄幻</a></div>
+        <div class="boy_1" @click="hanle(index)" v-for="(item,index) in boy" :key="index"><a style="color: #ee6460;">{{item.title}}</a></div>
+        <!-- <div class="boy_1" @click="hanle(index)"><a style="color: #ee6460;">玄幻</a></div>
         <div class="boy_1"><a>悬疑</a></div>
         <div class="boy_1"><a>灵异</a></div>
         <div class="boy_1"><a>历史</a></div>
@@ -13,24 +13,15 @@
         <div class="boy_1"><a>科幻</a></div>
         <div class="boy_1"><a>同人</a></div>
         <div class="boy_1"><a>短篇</a></div>
-        <div class="boy_1"><a>终结者2游戏</a></div>
+        <div class="boy_1"><a>终结者2游戏</a></div> -->
         
         </div>
     </div>
     <div id="box2">
             	<h2>丨女生小说</h2>
         <div id="girl">
-        <div class="girl_1"><a style="color: #ee6460;">现言</a></div>
-        <div class="girl_1"><a style="color: #ee6460;">穿越</a></div>
-        <div class="girl_1"><a>宫斗</a></div>
-        <div class="girl_1"><a>古言</a></div>
-        <div class="girl_1"><a>灵异</a></div>
-        <div class="girl_1"><a>短篇</a></div>
-        <div class="girl_1"><a>校园</a></div>
-        <div class="girl_1"><a>仙侠</a></div>
-        <div class="girl_1"><a>种田</a></div>
-        <div class="girl_1"><a>同人</a></div>
-        <div class="girl_1"><a>纯爱</a></div>
+        <div class="girl_1" @click="handleGirl(index)" v-for="(item,index) in girl" :key="index"><a >{{item.title}}</a></div>
+      
         
         </div>
 
@@ -39,20 +30,7 @@
         <div id="box3">
             	<h2>丨图书书库</h2>
         <div id="book">
-        <div class="book_1"><a style="color: #ee6460;">小说作品</a></div>
-        <div class="book_1"><a style="color: #ee6460;">人文社科</a></div>
-        <div class="book_1"><a>品质生活</a></div>
-        <div class="book_1"><a>两性情感</a></div>
-        <div class="book_1"><a>成功励志</a></div>
-        <div class="book_1"><a>经济管理</a></div>
-        <div class="book_1"><a>文学作品</a></div>
-        <div class="book_1"><a>文化艺术</a></div>
-        <div class="book_1"><a>自然科学</a></div>
-        <div class="book_1"><a>亲子少儿</a></div>
-        <div class="book_1"><a>计算机</a></div>
-        <div class="book_1"><a>培训考试</a></div>
-        <div class="book_1"><a>杂志期刊</a></div>
-        <div class="book_1"><a>外文外版</a></div>
+        <div class="book_1" @click="handleTu(index)" v-for="(item,index) in Tu" :key="index"><a>{{item.name}}</a></div>
 
         
         </div>
@@ -85,16 +63,148 @@
 
 
 
-    
+    <Top/>
 </div>
 
     
 </template>
 
 <script>
+import {classifyData} from "api/classify";
+import {mapActions} from "vuex";
 export default {
-    name:"classify"
+	name:"classify",
+	mouted(){
+		var str = document.querySelectorAll('.book_1');
+		str.onclick = function(){
+		}
+	},
+	methods:{
+		hanle(index){
+			var num = this.boy[index].id
+			var gender = this.boy[index].gender
+			this.$router.push({path:'./table',
+			query:{
+				id:num
+			}
+			}
+			);
+			
+		},
+		handleGirl(index){
+			var num = this.girl[index].id
+			this.$router.push({path:'./tableGirl',
+			query:{
+				id:num
+			}
+			}
+			);
+		},
+		handleTu(index){
+			var title = this.Tu[index].name
+			var num = this.Tu[index].id
+			window.scrollTo(0,0)
+			this.$router.push({path:'./tableTu',
+			query:{
+				id:num,
+				title:title
+			},
+		
+			}
+			);
+		}
+	},
+	data(){
+		return {
+			boy:[
+				{title:"玄幻",
+				id:1,
+				gender:'female'
+				},
+				{title:"科幻",
+				id:2
+				},
+				{title:"军事",
+				id:3
+				},
+				{title:"灵异",
+				id:4},
+				{title:"历史",
+				id:11},
+				{title:"都市",
+				id:7},
+				{title:"同人",
+				id:10},
+				{title:"短篇",
+				id:12},
+				{title:"终结者游戏",
+				id:20000},
+			],
+			girl:[
+				{title:"现言",
+				id:8,
+				},
+				{title:"穿越",
+				id:9
+				},
+				{title:"宫斗",
+				id:18
+				},
+				{title:"古言",
+				id:24},
+				{title:"灵异",
+				id:14},
+				{title:"短篇",
+				id:16},
+				{title:"校园",
+				id:22},
+				{title:"仙侠",
+				id:13},
+				{title:"种田",
+				id:17},
+				{title:"同人",
+				id:15},
+				{title:"纯爱",
+				id:25},
+			],
+			Tu:[
+				{name:"小说",
+				id:2000,
+				},
+				{name:"人文社科",
+				id:2300
+				},
+				{name:"品质生活",
+				id:2800
+				},
+				{name:"两性情感",
+				id:2500},
+				{name:"成功励志",
+				id:2600},
+				{name:"经济管理",
+				id:2400},
+				{name:"文学作品",
+				id:2100},
+				{name:"自然科学",
+				id:2900},
+				{name:"文化艺术",
+				id:2200},
+				{name:"亲子少儿",
+				id:2700},
+				{name:"计算机",
+				id:3000},
+				{name:"培训考试",
+				id:3100},
+				{name:"杂志期刊",
+				id:12000},
+				{name:"外文外版",
+				id:3200},
+			]
+		}
+	}
 }
+//category
+//female
 </script>
 
 <style spoced>

@@ -2,33 +2,19 @@
 <div>
      <HeaderCom/>
      <BoyTuiJian/>
-
-
-
    <BoyBody/>
-
-
-
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide"><img src="https://easyreadfs.nosdn.127.net/fe_cms/file.cbacb57d248c28170d7f10139fac4b26.jpg" alt=""></div>
             <div class="swiper-slide"><img src="https://easyreadfs.nosdn.127.net/fe_cms/file.cbacb57d248c28170d7f10139fac4b26.jpg" alt=""></div>
         </div>
     </div>
-     
          <BoyCity/>
-
         <BoyLoveLook/>
-
-
        <BoyPerfect/>
-        
-
         <BoyBoom/>
-
-
+      <Top/>
     <Footer/>
-
 </div>
     
 </template>
@@ -48,7 +34,8 @@ export default {
       BoyBoom,
       BoyTuiJian,
       BoyCity,
-      BoyPerfect
+      BoyPerfect,
+   
     },
     mounted(){
         var mySwiper = new Swiper('.swiper-container', {

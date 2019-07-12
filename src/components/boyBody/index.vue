@@ -1,7 +1,7 @@
 <template>
      <div class="list_boy">
         <ul>
-            <v-touch tag="li" @tap="handleList()" class="list_play" v-for="(item,index) in boyRecommend" :key="index">
+            <v-touch tag="li" @tap="handleList(index)" class="list_play" v-for="(item,index) in boyRecommend" :key="index">
                 <div class="play_img">
                   <img :src="item.coverImage">
                   <div class="play_xm">限免</div>
@@ -21,6 +21,7 @@
 
 <script>
 import {getBoyNow} from "api/boy";
+import {listData} from "api/list";
 export default {
   name:"boybody",
   async created(){
@@ -30,12 +31,20 @@ export default {
   },
   data(){
     return {
-      boyRecommend:[]
+      boyRecommend:[],
+      name:''
     }
   },
   methods:{
-    handleList(){
-      this.$router.push("/list")
+    handleList(index){
+      window.scrollTo(0,0)
+ 
+      this.name = this.boyRecommend[index].title
+         this.$router.push({
+         path:"/list",
+         query:{key:this.name}
+         }
+        ) 
     }
   }
 }

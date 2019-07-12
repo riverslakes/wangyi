@@ -2,7 +2,7 @@
   <div>
     <div id="foot">
       <div class="input_wn">
-        <input type="text" class="txt" placeholder="请输入作者或书名" />
+        <input type="text" class="txt" placeholder="请输入作者或书名" @click="Search()" />
         <button class="but">
           <i class="iconfont icon-fdj"></i>
         </button>
@@ -27,7 +27,12 @@
 
 <script>
 export default {
-  name: "footer"
+  name: "footer",
+  methods:{
+    Search(){
+            this.$router.push("./search")
+        }
+  }
 };
 </script>
 

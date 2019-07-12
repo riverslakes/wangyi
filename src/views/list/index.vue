@@ -10,21 +10,21 @@
       </div>
       <div class="iconfont icon-fdj"></div>
       <div class="index">
-        <a>首页</a>
+        <a @click="backHome()">首页</a>
       </div>
     </div>
 
     <!--主体内容-->
     <div class="main">
       <div class="img">
-        <img src="https://easyreadfs.nosdn.127.net/zC-bK4Wl5afRyWrSZwytXg==/7917037873850099328" />
+        <img :src="listArr[0].coverImage" />
       </div>
       <div class="introduce">
-        <span>赌石高手</span>
-        <p>作者：道门弟子</p>
-        <p>分类：都市丨已完结</p>
-        <p>字数：505万</p>
-        <p>点击：4964.6万</p>
+        <span>{{listArr[0].title}}</span>
+        <p>作者：{{listArr[0].author}}</p>
+        <p>分类：{{listArr[0].category}}丨已完结</p>
+        <p>字数：{{listArr[0].showTotalCount}}</p>
+        <p>点击：{{listArr[0].showClickCount}}</p>
         <p>授权方：北京易天新动网络科技有限公司</p>
       </div>
      </div>
@@ -32,7 +32,7 @@
 
     <div class="border">
         <div class="read">
-          <a>立即阅读</a>
+          <a @click="goRead()">立即阅读</a>
         </div>
         <div class="txt">
           <a>下载整本</a>
@@ -63,8 +63,7 @@
       </div>
       <div class="wz">
         <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;巨商富二代一夜变成落魄少爷，唐大少背负起家族巨债，在惊心动魄的赌石中竟然赚取到了千万巨资，不仅帮助父亲重振家业，更是成为了赌石界的传奇高手。
-            <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;而这一切成功的秘密，只有他一个人知道。
+           {{listArr[0].description}}
         </p>
       </div>
     </div>
@@ -171,24 +170,49 @@
     <div class="box6">
       <p>网易版权公司所有©1997-2019</p>
     </div>
+    <Top/>
   </div>
 </template>
 
 <script>
-import {mapActions} from "vuex";
+import {listData} from "api/list";
 export default {
   name:"classify",
-  created(){
-      this.getData();
+  async activated(){
+  this.listArr = this.$route.query.key;
+  let data = await listData(this.listArr);
+  this.dataArr = data.data.books
+  this.dataArr.length = 1
+  this.listArr = this.dataArr
+  this.obj.title = this.listArr[0].title
+  this.obj.description = this.listArr[0].description
+
+   console.log(this.dataArr)
   },
   methods:{
 
     back(){
       this.$router.go(-1);
     },
-    ...mapActions({
-      getData:"classify/getData"
-    })
+    backHome(){
+      this.$router.push('./')
+    },
+    goRead(){
+      this.$router.push({
+        path:'./textContent',
+        query:{key:this.listArr}
+        })
+
+    }
+
+  },
+  data(){
+    return {
+      num:2,
+      listArr:[],
+      dataArr:[],
+      obj:''
+    }
   }
 };
 </script>
@@ -204,7 +228,8 @@ export default {
 }
 
 .header .return {
-  margin: 0 2.24rem 0 0.3rem;
+  float: left;
+	margin-left:0.2rem;
 }
 
 .header .return a {
@@ -212,7 +237,8 @@ export default {
 }
 
 .header .book {
-  margin-right: 1.46rem;
+ 	width: 100%;
+	text-align: center;
 }
 
 .header .book span {
@@ -224,7 +250,10 @@ export default {
 }
 
 .header .index {
-  margin-left: 0.36rem;
+ width: 0.8rem;
+	float:right;
+	margin-left: 0.2rem;
+	margin-right:.2rem;
 }
 
 .header .index a {
@@ -356,6 +385,7 @@ export default {
   width: 100%;
   height: 2.9rem;
   border-bottom: 1px solid #e8e7e6;
+  overflow: hidden;
 }
 
 .cont .nr {
@@ -372,6 +402,7 @@ export default {
   font-size: 0.26rem;
   color: #979999;
   margin: 0.16rem 0 0 0.32rem;
+  overflow: hidden;
 }
 
 .catalog {

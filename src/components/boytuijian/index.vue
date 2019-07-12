@@ -4,7 +4,7 @@
         <strong>重磅推荐</strong><span>更多</span>
       </div>
       <ul>
-        <v-touch tag="li" @tap="handleList()" class="recommend" v-for="(item,index) in BoyTuiJian" :key="index">
+        <v-touch tag="li" @tap="handleList(index)" class="recommend" v-for="(item,index) in BoyTuiJian" :key="index">
            <div class="recommend_img"><img :src="item.iconUrl"></div>
           <h4>{{item.title}}</h4>
           <p>{{item.author}}</p>
@@ -26,12 +26,20 @@ export default {
     },
     data(){
         return {
-            BoyTuiJian:[]
+            BoyTuiJian:[],
+      
         }
     },
     methods:{
-    handleList(){
-      this.$router.push("/list")
+    handleList(index){
+      window.scrollTo(0,0)
+       
+      this.name = this.BoyTuiJian[index].title
+         this.$router.push({
+         path:"/list",
+         query:{key:this.name}
+         }
+        ) 
     }
   }
 }

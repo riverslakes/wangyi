@@ -6,7 +6,7 @@
                 <span>网易云阅读</span>
             </div>
             <div class="h_login">
-                <a href="#" class="iconfont icon-fdj"></a>
+                <a @click="Search()" class="iconfont icon-fdj fdj"></a>
                 <a href="#" class="iconfont icon-wd"></a>
             </div>
         </div>
@@ -62,6 +62,11 @@ export default {
             ],
             activeIndex:0,
         }
+    },
+    methods:{
+        Search(){
+            this.$router.push("./search")
+        }
     }
 }
 </script>
@@ -97,7 +102,12 @@ li{
     font-size: .36rem;
     color: #2b2b2b;
 }
-
+.fdj{
+    margin-right: 0.4rem;
+}
+.icon-wd{
+   color: #ccc;
+}
 .header_q{
     height: .6rem;
     width: 100%;

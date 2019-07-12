@@ -4,7 +4,7 @@
          <strong>男生限时免费</strong><span>更多</span>
         </div>
         <ul>
-            <v-touch tag="li" @tap="handleList()" class="list_play" v-for="(item,index) in BoyFree" :key="index">
+            <v-touch tag="li" @tap="handleList(index)" class="list_play" v-for="(item,index) in BoyFree" :key="index">
                 <div class="play_img">
                   <img :src="item.coverImage">
                   <div class="play_xm">限免</div>
@@ -34,12 +34,20 @@ export default {
   },
   data(){
     return {
-      BoyFree:[]
+      BoyFree:[],
+   
     }
   },
   methods:{
-    handleList(){
-      this.$router.push("/list")
+    handleList(index){
+      window.scrollTo(0,0)
+    
+     this.name = this.BoyFree[index].title
+         this.$router.push({
+         path:"/list",
+         query:{key:this.name}
+         }
+        ) 
     }
   }
 }

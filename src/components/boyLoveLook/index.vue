@@ -4,7 +4,7 @@
          <strong>大家都在看</strong><span>更多</span>
         </div>
         <ul>
-            <v-touch tag="li" @tap="handleList()" class="list_play" v-for="(item,index) in BoyLoveLook" :key="index">
+            <v-touch tag="li" @tap="handleList(index)" class="list_play" v-for="(item,index) in BoyLoveLook" :key="index">
                 <div class="play_img">
                   <img :src="item.coverImage">
                   <div class="play_xm">限免</div>
@@ -33,12 +33,20 @@ export default {
   },
   data(){
     return {
-      BoyLoveLook:[]
+      BoyLoveLook:[],
+     
     }
   },
   methods:{
-    handleList(){
-      this.$router.push("/list")
+    handleList(index){
+      window.scrollTo(0,0)
+      
+      this.name = this.BoyLoveLook[index].title
+         this.$router.push({
+         path:"/list",
+         query:{key:this.name}
+         }
+        ) 
     }
   }
 }

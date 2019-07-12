@@ -13,7 +13,7 @@
         <PublishNew/>
 
         <PublishRank/>
-        
+        <Top/>
         <Footer/>
     </div>
     

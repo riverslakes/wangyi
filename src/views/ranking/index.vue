@@ -4,6 +4,7 @@
     <RankBoy/>
     <RankGirl/>
     <RankTushu/>
+    <Top/>
     <Footer/>
   </div>
 </template>

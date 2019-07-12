@@ -4,7 +4,7 @@
          <strong>女生限时免费</strong><span>更多</span>
         </div>
         <ul>
-            <v-touch class="list_play" v-for="(item,index) in GirlFree" :key="index">
+            <v-touch class="list_play" @tap="handleList(index)" v-for="(item,index) in GirlFree" :key="index">
                 <div class="play_img">
                   <img :src="item.coverImage">
                   <div class="play_xm">限免</div>
@@ -34,12 +34,20 @@ export default {
   },
   data(){
     return {
-      GirlFree:[]
+      GirlFree:[],
+     
     }
   },
   methods:{
-    handleList(){
-      this.$router.push("/list")
+    handleList(index){
+      window.scrollTo(0,0)
+      
+       this.name = this.GirlFree[index].title
+         this.$router.push({
+         path:"/list",
+         query:{key:this.name}
+         }
+        ) 
     }
   }
 }

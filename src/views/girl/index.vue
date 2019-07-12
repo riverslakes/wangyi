@@ -22,6 +22,7 @@
     <GirlCityLove/>
     <GirlIncense/>
     <GirlBoom/>
+    <Top/>
     <Footer />
   </div>
 </template>
