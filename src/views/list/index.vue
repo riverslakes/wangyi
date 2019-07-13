@@ -8,12 +8,20 @@
       <div class="book">
         <span>书籍详情</span>
       </div>
-      <div class="iconfont icon-fdj"></div>
+      <div class="iconfont icon-fdj" @click="Search()"></div>
       <div class="index">
         <a @click="backHome()">首页</a>
       </div>
     </div>
 
+<el-table
+    v-loading="loading"
+    :data="tableData"
+    style="width: 100%">
+    
+  </el-table>
+
+  
     <!--主体内容-->
     <div class="main">
       <div class="img">
@@ -61,10 +69,8 @@
       <div class="nr">
           <span>内容简介</span>
       </div>
-      <div class="wz">
-        <p>
-           {{listArr[0].description}}
-        </p>
+      <div class="wz" v-html="listArr[0].description">
+
       </div>
     </div>
 
@@ -176,6 +182,7 @@
 
 <script>
 import {listData} from "api/list";
+import { Loading } from 'element-ui';
 export default {
   name:"classify",
   async activated(){
@@ -184,10 +191,8 @@ export default {
   this.dataArr = data.data.books
   this.dataArr.length = 1
   this.listArr = this.dataArr
-  this.obj.title = this.listArr[0].title
-  this.obj.description = this.listArr[0].description
 
-   console.log(this.dataArr)
+
   },
   methods:{
 
@@ -203,16 +208,28 @@ export default {
         query:{key:this.listArr}
         })
 
-    }
-
+    },
+  Search(){
+              this.$router.push("./search")
+          }
   },
   data(){
     return {
       num:2,
       listArr:[],
-      dataArr:[],
-      obj:''
+      dataArr:[]
+ 
     }
+  },
+  updated(){
+    let loadingInstance = Loading.service({ fullscreen: true });
+    var timer = setTimeout(function(){
+     
+  
+  loadingInstance.close();
+
+    },1000)
+     
   }
 };
 </script>
@@ -386,6 +403,7 @@ export default {
   height: 2.9rem;
   border-bottom: 1px solid #e8e7e6;
   overflow: hidden;
+  background:#faf7f5;
 }
 
 .cont .nr {
@@ -398,17 +416,24 @@ export default {
 
 .cont .wz {
   width: 6.7rem;
-  height: 1.46rem;
-  font-size: 0.26rem;
+  height: 1.6rem;
+  margin: 0.1rem 0 0 0.32rem;
+  font-size: 0.3rem;
   color: #979999;
-  margin: 0.16rem 0 0 0.32rem;
+  line-height: 0.4rem;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
   overflow: hidden;
+  padding-top: 0.1rem;
+  text-indent: 2em;
 }
-
 .catalog {
   width: 100%;
   height: 4.5rem;
   border-bottom: 1px solid #e8e7e6;
+  background:#faf7f5;
 }
 .catalog .ml {
   width: 100%;

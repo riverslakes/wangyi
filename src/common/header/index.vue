@@ -71,7 +71,7 @@ export default {
 }
 </script>
 
-<style>
+<style sccoped>
 li{
     list-style: none;
 }

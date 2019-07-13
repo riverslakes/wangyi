@@ -1,6 +1,14 @@
 <template>
 <div>
     <HeaderCom/>
+
+	<!-- <el-table
+    v-loading="loading"
+    :data="tableData"
+    style="width: 100%">
+    
+  </el-table> -->
+
     <div id="box">
     	<h2>丨男生小说</h2>
         <div id="boy">
@@ -72,6 +80,8 @@
 <script>
 import {classifyData} from "api/classify";
 import {mapActions} from "vuex";
+import { Loading } from 'element-ui';
+
 export default {
 	name:"classify",
 	mouted(){
@@ -114,6 +124,16 @@ export default {
 			);
 		}
 	},
+// 	 updated(){
+//     let loadingInstance = Loading.service({ fullscreen: true });
+//     var timer = setTimeout(function(){
+     
+  
+//   loadingInstance.close();
+
+//     },1000)
+     
+//   },
 	data(){
 		return {
 			boy:[

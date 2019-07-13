@@ -10,7 +10,7 @@
       <div class="list-msg">
         <p class="list-name">{{Rankval[0].title}}</p>
         <p class="list-intro">{{Rankval[0].author}}/{{Rankval[0].category}}</p>
-        <p class="list-details">{{Rankval[0].description}}</p>
+        <div class="list-details">{{Rankval[0].description}}</div>
       </div>
     </div>
     <div class="rest">

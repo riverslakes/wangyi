@@ -8,11 +8,20 @@
       <div class="city">
         <span>{{dataTile}}</span>
       </div>
-      <div class="iconfont icon-fdj"></div>
+      <div class="iconfont icon-fdj" @click="Search()"></div>
       <div class="index">
-        <a>首页</a>
+        <a @click="backHome()">首页</a>
       </div>
     </div>
+
+	<el-table
+    v-loading="loading"
+    :data="tableData"
+    style="width: 100%,background:#fff">
+    
+  </el-table>
+
+  
     <!--选项-->
     <div id="option">
       <div id="time">
@@ -34,7 +43,7 @@
         <div class="free">免费</div>
         <div class="pay">付费</div>
       </div>
-      <div class="main" v-for="(item,index) in tableData" :key="index">
+      <div class="main" v-for="(item,index) in tableData" :key="index" @click="handleList(index)">
         <div class="img">
           <img :src="item.iconUrl" />
         </div>
@@ -52,14 +61,14 @@
 
 <script>
 import {classifyGirlData} from 'api/classify';
+import { Loading } from 'element-ui';
+
 export default {
 	name:"tableGirl",
-	async activated(){
-		console.log(this.$route.query.id)
+	async activated(){	
 		let id = this.$route.query.id
 		let data = await classifyGirlData(id)
 		this.tableData = data.data.books;
-		console.log(this.tableData)
 		this.dataTile = this.tableData[0].category;
 	},
 	data(){
@@ -72,8 +81,32 @@ export default {
 	methods:{
 		backClassify(){
 			this.$router.go(-1);
-		}
-	}
+		}, backHome(){
+		this.$router.push('./')
+		},
+		 Search(){
+            this.$router.push("./search")
+		},
+		 handleList(index){
+			window.scrollTo(0,0)
+			this.name = this.tableData[index].title
+			this.$router.push({
+				path:"/list",
+				query:{key:this.name}
+				}
+			) 
+		},
+	},
+	  updated(){
+    let loadingInstance = Loading.service({ fullscreen: true });
+    var timer = setTimeout(function(){
+     
+  
+  loadingInstance.close();
+
+    },1000)
+     
+  }
 	
 }
 </script>

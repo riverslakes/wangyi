@@ -8,11 +8,19 @@
       <div class="city">
         <span>{{dataTile}}</span>
       </div>
-      <div class="iconfont icon-fdj"></div>
+      <div class="iconfont icon-fdj" @click="Search()"></div>
       <div class="index">
-        <a>首页</a>
+        <a @click="backHome()">首页</a>
       </div>
     </div>
+
+	<el-table
+    v-loading="loading"
+    :data="tableData"
+    style="width: 100%,background:#fff">
+    
+  </el-table>
+
     <!--选项-->
     <div id="option">
       <div id="time">
@@ -53,15 +61,15 @@
 <script>
 import {classifyData} from 'api/classify';
 import {mapActions} from "vuex";
+import { Loading } from 'element-ui';
+
 export default {
 	name:"table",
 	async activated(){
-		console.log(this.$route.query.id)
 		let id = this.$route.query.id
 		var gender = this.$route.query.gender
 		let data = await classifyData(id)
 		this.tableData = data.data.books;
-		console.log(this.tableData)
 		this.dataTile = this.tableData[0].category;
 	},
 	data(){
@@ -76,16 +84,31 @@ export default {
 			this.$router.go(-1);
 		},
 		 handleList(index){
-      window.scrollTo(0,0)
-	console.log(222)
-      this.name = this.tableData[index].title
-         this.$router.push({
-         path:"/list",
-         query:{key:this.name}
-         }
-        ) 
-    }
-	}
+			window.scrollTo(0,0)
+			this.name = this.tableData[index].title
+			this.$router.push({
+				path:"/list",
+				query:{key:this.name}
+				}
+			) 
+		},
+		 backHome(){
+		this.$router.push('./')
+		},
+		 Search(){
+            this.$router.push("./search")
+        }
+	},
+	  updated(){
+    let loadingInstance = Loading.service({ fullscreen: true });
+    var timer = setTimeout(function(){
+     
+  
+  loadingInstance.close();
+
+    },1000)
+     
+  }
 	
 }
 </script>
